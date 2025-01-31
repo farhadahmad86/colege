@@ -1,0 +1,10 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^invoice/([a-zA-Z]+-[0-9]+) invoice.php?format=1&in=$1 [NC,L]
+RewriteRule ^invoice/([12])/([a-zA-Z]+-[0-9]+) invoice.php?format=$1&in=$2 [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^voucher/([a-zA-Z]+-[0-9]+) voucher.php?vn=$1 [NC,L]

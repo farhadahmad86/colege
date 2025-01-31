@@ -1,0 +1,11 @@
+/node_modules
+.idea
+/.idea
+/.idea/
+/.idea/*
+.idea/workspace.xml
+/.idea/workspace.xml
+.idea/deployment.xml
+/.idea/deployment.xml
+*.xml
+.env

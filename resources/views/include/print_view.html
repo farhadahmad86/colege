@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        /* Styles go here */
+
+        .page-header, .page-header-space {
+            height: 100px;
+        }
+
+        .page-footer, .page-footer-space {
+            height: 100px;
+
+        }
+
+        .page-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid black; /* for demo */
+            background: yellow; /* for demo */
+        }
+
+        .page-header {
+            position: fixed;
+            top: 0mm;
+            width: 100%;
+            border-bottom: 1px solid black; /* for demo */
+            background: yellow; /* for demo */
+        }
+
+
+        header {
+            height: 100px !important;
+        }
+
+        .header {
+            position: relative !important;
+            display: flex !important;
+            background-color: #EAEAEA !important;
+        }
+
+        .logo,
+        .org,
+        .header .contact {
+            color: #242424 !important;
+            flex: 1 !important;
+        }
+
+        .logo {
+            text-align: left !important;
+        }
+
+        .logo img {
+            width: 250px !important;
+            height: 100% !important;
+        }
+
+        .org {
+            text-align: center !important;
+            font-size: 45px !important;
+            font-weight: bold !important;
+            padding-top: 15px !important;
+        }
+
+        .header .contact {
+            text-align: right !important;
+        }
+
+        .header .contact p {
+            display: block !important;
+            padding: 8px 15px 3px 0 !important;
+            line-height: 10px !important;
+        }
+
+        .header .contact span {
+            font-size: 18px !important;
+            font-weight: bold !important;
+            padding: 0 18px 3px 0 !important;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        footer {
+            position: relative !important;
+            height: 100px !important;
+        }
+
+        .footer {
+            display: flex !important;
+            padding: 5px !important;
+            background-color: #EAEAEA !important;
+        }
+
+        .left,
+        .center,
+        .right {
+            flex: 1;
+        }
+
+        .center {
+            text-align: center !important;
+        }
+
+        .center .address,
+        .center .copyright,
+        .footer .center .contact {
+            display: block !important;
+            padding: 3px !important;
+        }
+
+        .footer .right {
+            text-align: right !important;
+        }
+
+        .footer .date {
+            position: absolute !important;
+            bottom: 10px !important;
+            right: 15px !important;
+            font-size: 18px !important;
+            font-weight: bold !important;
+        }
+
+
+        .page {
+            page-break-after: always;
+        }
+
+        @page {
+            margin: 20mm
+        }
+
+        @media print {
+            thead {
+                display: table-header-group;
+            }
+
+            tfoot {
+                display: table-footer-group;
+            }
+
+            button {
+                display: none;
+            }
+
+            body {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page-header" style="text-align: center">
+    <header class="header">
+        <div class="logo">
+            <img src="https://via.placeholder.com/200x200" alt="">
+        </div>
+        <div class="org">' + print_org + '</div>
+        <div class="contact">
+            <p>Phone No. <span>' + print_phone + '</span></p>
+            <p>Mobile No. <span>' + print_mobile + '</span></p>
+            <p>Whatsapp No. <span>' + print_whatsapp + '</span></p>
+            <p>Fax No. <span>' + print_fax + '</span></p>
+        </div>
+    </header>
+</div>
+
+<div class="page-footer">
+    <footer class="footer">
+        <div class="left"></div>
+        <div class="center">
+            <div class="address">' + print_address + '</div>
+            <div class="contact">' + print_email + '</div>
+            <div class="copyright">&copy; ' + print_copyright + '</div>
+        </div>
+        <div class="right">
+            <div class="date">
+                {{ now() }}
+            </div>
+        </div>
+    </footer>
+</div>
+
+<table>
+
+    <thead>
+    <tr>
+        <td>
+            <!--place holder for the fixed-position header-->
+            <div class="page-header-space"></div>
+        </td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>
+            <!--*** CONTENT GOES HERE ***-->
+
+            <div class="page" style="line-height: 3;">
+                PAGE 3 - Long Content
+                <br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt metus eu consectetur
+                rutrum. Praesent tempor facilisis dapibus. Aliquam cursus diam ac vehicula pulvinar. Integer lacinia non
+                odio et condimentum. Aenean faucibus cursus
+                mi, sed interdum turpis sagittis a. Quisque quis pellentesque mi. Ut erat eros, posuere sed scelerisque
+                ut, pharetra vitae tellus. Suspendisse ligula sapien, laoreet ac hendrerit sit amet, viverra vel mi.
+                Pellentesque faucibus nisl et dolor
+                pharetra, vel mattis massa venenatis. Integer congue condimentum nisi, sed tincidunt velit tincidunt
+                non. Nulla sagittis sed lorem pretium aliquam. Praesent consectetur volutpat nibh, quis pulvinar est
+                volutpat id. Cras maximus odio posuere
+                suscipit venenatis. Donec rhoncus scelerisque metus, in tempus erat rhoncus sed. Morbi massa sapien,
+                porttitor id urna vel, volutpat blandit velit. Cras sit amet sem eros. Quisque commodo facilisis
+                tristique. Proin pellentesque sodales rutrum.
+                Vestibulum purus neque, congue vel dapibus in, venenatis ut felis. Donec et ligula enim. Sed sapien
+                sapien, tincidunt vitae lectus quis, ultricies rhoncus mi. Nunc dapibus nulla tempus nunc interdum, sed
+                facilisis ex pellentesque. Nunc vel
+                lorem leo. Cras pharetra sodales metus. Cras lacus ex, consequat at consequat vel, laoreet ac dui.
+                Curabitur aliquam, sapien quis congue feugiat, nisi nisl feugiat diam, sed vehicula velit nulla ac nisl.
+                Aliquam quis nisi euismod massa blandit
+                pharetra nec eget nunc. Etiam eros ante, auctor sit amet quam vel, fringilla faucibus leo. Morbi a
+                pulvinar nulla. Praesent sed vulputate nisl. Orci varius natoque penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus. Aenean commodo
+                mollis iaculis. Maecenas consectetur enim vitae mollis venenatis. Ut scelerisque pretium orci id
+                laoreet. In sit amet pharetra diam. Vestibulum in molestie lorem. Nunc gravida, eros non consequat
+                fermentum, ex orci vestibulum orci, non accumsan
+                sem velit ac lectus. Vivamus malesuada lacus nec velit dignissim, ac fermentum nulla pretium. Aenean mi
+                nisi, convallis sed tempor in, porttitor eu libero. Praesent et molestie ante. Duis suscipit vitae purus
+                sit amet aliquam. Vestibulum lectus
+                justo, lobortis a purus a, dapibus efficitur metus. Suspendisse potenti. Duis dictum ex lorem.
+                Suspendisse nec ligula consectetur magna hendrerit ullamcorper et eget mauris. Etiam vestibulum sodales
+                diam, eget venenatis nunc luctus quis. Ut
+                fermentum placerat neque nec elementum. Praesent orci erat, rhoncus vitae est eu, dictum molestie metus.
+                Cras et fermentum elit. Aenean eget augue lacinia, varius ante in, ullamcorper dolor. Cras viverra purus
+                non egestas consectetur. Nulla
+                nec dolor ac lectus convallis aliquet sed a metus. Suspendisse eu imperdiet nunc, id pulvinar risus.
+                Maecenas varius sagittis est, vel fermentum risus accumsan at. Vestibulum sollicitudin dui pharetra
+                sapien volutpat, id convallis mi vestibulum.
+                Phasellus commodo sit amet lorem quis imperdiet. Proin nec diam sed urna euismod ultricies at sed urna.
+                Quisque ornare, nulla et vehicula ultrices, massa purus vehicula urna, ac sodales lacus leo vitae mi.
+                Sed congue placerat justo at placerat.
+                Aenean suscipit fringilla vehicula. Quisque iaculis orci vitae arcu commodo maximus. Maecenas nec nunc
+                rutrum, cursus elit quis, porttitor sapien. Sed ac hendrerit ipsum, lacinia fringilla velit. Donec
+                ultricies feugiat dictum.
+            </div>
+        </td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <td>
+            <!--place holder for the fixed-position footer-->
+            <div class="page-footer-space"></div>
+        </td>
+    </tr>
+    </tfoot>
+
+</table>
+
+</body>
+
+</html>

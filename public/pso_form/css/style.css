@@ -1,0 +1,311 @@
+
+
+body{
+    background-color: #eaeef5;
+}
+
+.mp_0{
+    margin: 0;
+    padding: 0;
+}
+
+.mp_01{
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.mp_0_imp{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.table>tbody>tr>td,
+.table>tfoot>tr>td,
+.table>thead>tr>td {
+    /*padding: 0px;*/
+}
+
+.db{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.db:after{
+    display: table;
+    clear: both;
+    content: '';
+    position: relative;
+}
+
+.upper{
+    text-transform: uppercase;
+}
+
+.bold{
+    font-weight: bolder;
+}
+
+.col_border{
+    padding: 0;
+    margin: 0;
+    border: 1px solid red;
+}
+
+.form_pso{
+    background-color: #fff;
+    padding: 0px 20px;
+}
+
+/*.header{*/
+/*    margin: 20px 0 0;*/
+/*}*/
+
+.frm_hdr{
+    position: relative;
+    padding: 20px 20px;
+}
+
+.frm_logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: 125px;
+    max-width: 125px;
+    width: 100%;
+}
+
+.frm_hdng{
+    padding: 20px 0 0 125px;
+}
+
+.frm_hdng_ttl{
+    font-size: 35px;
+}
+
+.frm_hdng_para{
+    font-size: 24px;
+}
+
+.frm_srl {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    max-width: 125px;
+    width: 100%;
+    text-align: right;
+}
+
+.sctn_one{
+    position: relative;
+}
+
+.sctn_bx{
+    padding-bottom: 30px;
+}
+
+
+.inputs_up,
+.txt_area{
+    width: 100%;
+    border-radius: 0px;
+    font-size: 16px;
+    padding: 0 17px 0 15px;
+    color: #2a2a2a;
+    background-color: #fff;
+    border: 0px solid transparent;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.inputs_up {
+    height: 41px;
+}
+
+.input_up_scnd{
+    font-size: 14px;
+    text-align: center;
+}
+
+.input_up_thrd{
+    font-size: 14px;
+    text-align: left;
+}
+
+.txt_area {
+    height: 77px;
+    padding: 15px 15px 0;
+    resize: none;
+    outline: none;
+}
+
+.lbl{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.lbl_th{
+    font-size: 14px;
+    text-transform: uppercase;
+    vertical-align: middle !important;
+}
+
+.sctn_one_tbl_th {
+    width: 185px;
+}
+
+.brdr_clr{
+    border: 1px solid red !important;
+}
+
+.brdr_0_lft{
+    border-left: 0px solid transparent !important;
+}
+
+.brdr_0_tp{
+    border-top: 0px solid transparent !important;
+}
+
+.brdr_0_btm{
+    border-bottom: 0px solid transparent !important;
+}
+
+.brdr_0_rt{
+    border-right: 0px solid transparent !important;
+}
+
+.ln_ht{
+    line-height: 25px !important;
+}
+
+.txt_fnt{
+    font-size: 11.5px;
+}
+
+.urdu_div{
+    border-bottom: 1px solid red;
+    padding: 0 0 7px;
+    margin: 0 0 7px;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    /*vertical-align: middle;*/
+}
+
+.wdth_1{
+    min-width: 145px;
+}
+
+.wdth_2{
+    min-width: 245px;
+}
+
+.wdth_3{
+    min-width: 125px;
+}
+
+.wdth_4{
+    min-width: 95px;
+}
+
+.wdth_5{
+    min-width: 110px;
+}
+
+.wdth_6{
+    min-width: 395px;
+}
+
+.wdth_7{
+    min-width: 215px;
+}
+
+.form_controls {
+    text-align: right;
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding-top: 15px;
+}
+
+.form_controls input[type="button"].cancel_button,
+.form_controls input[type="submit"].cancel_button,
+.form_controls input[type="button"].save_button,
+.form_controls input[type="submit"].save_button,
+.form_controls button[type="button"].cancel_button,
+.form_controls button[type="submit"].cancel_button,
+.form_controls button[type="button"].save_button,
+.form_controls button[type="submit"].save_button,
+.form_controls input[type="reset"].cancel_button,
+.form_controls button[type="reset"].cancel_button,
+.cancel_button,
+.save_button {
+    display: inline-block;
+    max-width: 145px;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    padding: 0px 20px 0px 20px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+    border: 1px solid transparent;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    transition: all ease-in-out 300ms;
+}
+
+.form_controls input[type="button"].cancel_button,
+.form_controls input[type="submit"].cancel_button,
+.form_controls input[type="button"].save_button,
+.form_controls input[type="submit"].save_button,
+.form_controls button[type="button"].cancel_button,
+.form_controls button[type="submit"].cancel_button,
+.form_controls button[type="button"].save_button,
+.form_controls button[type="submit"].save_button,
+.cancel_button,
+.save_button  {
+    background: rgba(48,90,114,1);
+}
+
+.form_controls input[type="button"].cancel_button:hover,
+.form_controls input[type="submit"].cancel_button:hover,
+.form_controls input[type="button"].save_button:hover,
+.form_controls input[type="submit"].save_button:hover,
+.form_controls button[type="button"].cancel_button:hover,
+.form_controls button[type="submit"].cancel_button:hover,
+.form_controls button[type="button"].save_button:hover,
+.form_controls button[type="submit"].save_button:hover,
+.cancel_button:hover,
+.save_button:hover{
+    background: rgba(48,122,165,1);
+    border-color: rgba(48,90,114,1);
+    color: #fff;
+}
+
+.form_controls input[type="reset"].cancel_button,
+.form_controls button[type="reset"].cancel_button {
+    background: rgba(42,136,173,1);
+}
+
+.form_controls input[type="reset"].cancel_button:hover,
+.form_controls button[type="reset"].cancel_button:hover {
+    background: rgba(48,122,165,1);
+    border-color: rgba(48,90,114,1);
+    color: #fff;
+}

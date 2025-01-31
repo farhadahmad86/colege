@@ -1,0 +1,39 @@
+
+.form-group.simple_form{
+    /* background-color: #f2f2f2; */
+}
+.form-group.simple_form .invoice_col_input {
+    position: relative;
+}
+
+.form-group.simple_form .invoice_col_input {
+    position: relative;
+}
+
+.form-group.simple_form .invoice_col_input .invoice_col_short {
+    position: absolute;
+    top: -18px !important;
+    right: 3px;
+    font-size: 12px;
+}
+
+.form-group.simple_form .invoice_col_bx {
+    padding: 0.2rem 0;
+}
+
+.form-group.simple_form .invoice_col_ttl {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.refresh-addition .invoice_col_short .add{
+    margin-right: 1px !important;
+    margin-top: -4px;
+    padding: 0px;
+}
+
+.refresh-addition .invoice_col_short .refresh{
+    margin-right: 25px !important;
+    margin-top: -4px;
+    padding: 0px;
+}

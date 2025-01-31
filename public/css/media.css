@@ -1,0 +1,82 @@
+/***************************************************/
+/***************  General  Settings  ***************/
+/***************************************************/
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
+}
+
+/***************************************************/
+/***************  max-width: 1200px  ***************/
+/***************************************************/
+@media only screen and (max-width: 1200px) {
+
+}
+
+/***************************************************/
+/***************  max-width: 1100px  ***************/
+/***************************************************/
+@media screen and (min-width:1024px) and (max-width:1100px) {
+
+}
+
+/***************************************************/
+/***************  max-width: 1023px  ***************/
+/***************************************************/
+@media only screen and (min-width: 999px) and (max-width: 1023px) {
+
+}
+
+/***************************************************/
+/***************  max-width:  998px  ***************/
+/***************************************************/
+@media only screen and (min-width: 769px) and (max-width: 998px) {
+    /* ============================ Account Ledger =============================== */
+    .accountLedger { width: 80% !important; }
+    .accountLedger .start, .accountLedger .end { width: 40%; flex: none; }
+    .mx-auto { margin: 0 !important; }
+
+
+    /* ============================ Purchase Invoice =============================== */
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 880px) {
+    /* ============================ Account Ledger =============================== */
+    .accountLedger { width: 80% !important; }
+    .accountLedger .start, .accountLedger .end { width: 40%; flex: none; }
+    .mx-auto { margin: 0 !important; }
+
+
+    /* ============================ Purchase Invoice =============================== */
+    .pi_left { width: 100% !important; max-width: 100%; flex: unset; }
+    .pi_right { width: 100% !important; max-width: 100%; flex: unset; }
+}
+
+/***************************************************/
+/***************  max-width:  768px  ***************/
+/***************************************************/
+@media only screen and (max-width: 768px) {
+
+    /* ============================ Account Ledger =============================== */
+    .accountLedger { width: 100% !important; }
+    .monthAccountLedger { position: absolute; top: 182px; left: 110px; }
+    .mx-auto { margin: 0 !important; }
+
+
+    /* ============================ Purchase Invoice =============================== */
+
+}
+/***************************************************/
+/***************  max-width:  480px  ***************/
+/***************************************************/
+@media only screen and (max-width: 480px) {
+    /* ============================ Account Ledger =============================== */
+    .accountLedger { width: 100% !important; }
+    .monthAccountLedger { position: absolute;top: 182px;left: 110px; }
+    .monthAccountLedger button { width: auto; }
+    .mx-auto { margin: 0 !important; }
+
+
+    /* ============================ Purchase Invoice =============================== */
+
+}

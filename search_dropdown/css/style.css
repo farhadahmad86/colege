@@ -1,0 +1,124 @@
+
+
+.container{
+    position: relative;
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main_heading{
+    position: relative;
+}
+
+.main_heading h3{
+    position: relative;
+    font-size: 18px;
+    text-align: center;
+}
+
+.main_heading h3 span{
+    position: relative;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+.search_con{
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.search_con .search_input_box{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.search_con .search_input_box:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+ .search_input{
+    position: relative;
+    box-sizing: border-box;
+}
+
+ .search_input .search{
+    position: relative;
+     width: 100%;
+     height: 30px;
+     padding: 5px 10px;
+     font-size: 14px;
+     box-sizing: border-box;
+}
+
+.col-50{
+    display: inline-block;
+    max-width: 46%;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    margin: 0 7px;
+}
+
+.tableBx{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin: 50px 0 0;
+}
+
+.tableBx .table{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.tableBx .table th,
+.tableBx .table td{
+    border: 1px solid;
+}
+
+
+
+.search-result-con{
+    display: block;
+    width: auto;
+    height: 75px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .5);
+    z-index: 9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

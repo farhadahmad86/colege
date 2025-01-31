@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ur">
+{{-- <script> --}}
+{{--    window.print() --}}
+{{-- </script> --}}
+
+<head>
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> --}}
+    <style>
+        /*@page {*/
+        /*    size: A4 portrait;*/
+        /*    margin: 0;*/
+        /*}*/
+
+        /*#home {*/
+        /*    size: 7in 9in;*/
+        /*    !* margin: 15mm 1mm 5mm 5mm; *!*/
+        /*    float: left;*/
+        /*    margin: 0 5vh;*/
+        /*    min-height: 100vh;*/
+        /*    padding-top: 10px;*/
+
+        /*}*/
+
+        @font-face {
+            font-family: 'SourceSansPro';
+            font-style: normal;
+            font-weight: normal;
+
+        }
+
+        .footer_urdu {
+            width: 340px;
+        }
+
+
+        .FID_Title {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            background-color: #AAAAAA !important;
+            -webkit-print-color-adjust: exact;
+            width: 100%
+        }
+
+        p {
+            margin: 0 0 3px 0 !important;
+        }
+
+        .border {
+            border: 1px solid #000 !important;
+            padding: 0px;
+            / / margin-right: 8 px;
+            / / height: 99 vh
+        }
+
+
+        #logo-row {
+            top: 13px;
+        }
+
+
+        .th-1 {
+            border: 1px solid #333 !important;
+            text-align: center;
+            font-size: 12px;
+            padding: 3px 3px !important;
+            white-space: nowrap;
+        }
+
+
+        .col-xs-4 {
+            width: 44%;
+            float: left;
+        }
+
+
+        h3 {
+            margin-top: -17px;
+        }
+
+        /* h4 {
+            margin-top: -13px;
+        } */
+
+        h5 {
+            margin-top: -5px;
+            margin-bottom: 5px;
+        }
+
+        .row {
+            margin-right: 0px !important;
+
+        }
+
+        /*.row {*/
+
+        /*    margin-left: 0px !important;*/
+
+        /*}*/
+
+        .hr-line {
+            margin-top: 20px !important;
+            margin-bottom: 20px !important;
+            width: 100% !important;
+            border: 1px solid black;
+
+        }
+
+        .v_print {
+            margin-left: 2rem;
+            text-align: right;
+            text-align: center;
+        }
+
+        /* .vertical {
+            border-left: 3px solid black;
+            height: 95%;
+            position:absolute;
+            left: 50%;
+        } */
+    </style>
+</head>
+
+<body>
+    @php
+        
+        use App\Http\Controllers\Controller;
+    @endphp
+
+
+    <div class="row" style="">
+        <div id="home">
+            <div class="size col-xs-4" style="margin-top:12px;margin-left: 40px;border-right: 2px solid black;">
+                @foreach ($query as $class)
+                    <div class="row" id="logo-row">
+                        <div class="" style="float:left;">
+                            {{-- @php
+                            $company_info = Session::get('company_info');
+                        @endphp --}}
+                            {{-- <div style="margin-top: 4px; margin-left: 3px;">
+                            <img style="height: 60px;" src="{{ $company_info->ci_logo }}" alt="Logo city">
+                        </div> --}}
+                        </div>
+                        <div class="" style="text-align: center; margin-top:10px;">
+                            <h3><strong>{{ $class->class_name }}</strong></h3>
+                            <h4><strong>{{ $class->section_name }}</strong></h4>
+                            <h4><strong>BANK COPY</strong></h4>
+                            <h5><strong>(CASH DEPOSIT SLIP)</strong></h5>
+                        </div>
+                    </div>
+                @endforeach
+                <div class="row " style="margin-top: 1px">
+                    <table class="table">
+                        <tbody style="border: 1px solid black;">
+                            @foreach ($students as $student)
+                            <tr>
+                                <th class="th-1">Student Name</th>
+                                <th class="th-1">
+                                   {{$student->full_name}}
+                                </th>
+                                <th class="th-1">Due Date</th>
+                                <th class="th-1">
+                                    {{-- {{ date('d-M-y', strtotime(str_replace('/', '-', $fee_voucher->fv_due_date))) }} --}}
+                                </th>
+                            </tr>
+                            @endforeach
+                           
+                        </tbody>
+                    </table>
+                    {{-- <h2 class="FID_Title">FID: {{ $fee_voucher->fv_v_no }}</h2> --}}
+                </div>
+                {{-- <p><strong>Account Title: {{ $college_bank_info->bi_title }}</strong></p> --}}
+                <table style="line-height:0px">
+                    <tr>
+                        <td>
+                            {{-- <p><strong>Account#:</strong> <strong>{{ $college_bank_info->bi_account_no }}</strong></p> --}}
+                        </td>
+                        <td style="padding-left: 5px;">
+                            {{-- <p><strong>Branch Code:</strong><strong>{{ $college_bank_info->bi_branch_code }}</strong> --}}
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                {{-- <p><strong>Branch Name: {{ $college_bank_info->bi_bank_name }}</strong></p> --}}
+                <div style="line-height:20px">
+                    {{-- <h4 style="font-size: 16px;">Student Name: {{ $fee_voucher->full_name }}</h4> --}}
+                    {{-- <h4 style="font-size: 16px;">Father Name: {{ $fee_voucher->father_name }}</h4> --}}
+                    {{-- <p><strong>Admission #: {{ $fee_voucher->registration_no }}</strong></p> --}}
+                    {{-- <p><strong>Class:</strong> {{ $fee_voucher->class_name }}</p> --}}
+                    <div style="width:95%; padding:0 0 3% 0">
+                        <table style="line-height: 18px; border: 2px solid;width: 100%;">
+                            <thead>
+                                <tr>
+                                    <td><strong>Account</strong></td>
+                                    <td><strong>RS</strong></td>
+                                </tr>
+                            </thead>
+                            <tbody style="border-top:2px solid;">
+
+                                {{-- @if ($fee_voucher->fv_t_fee > 0) --}}
+                                    <tr>
+                                        <td>Tution Fee</td>
+                                        {{-- <td>{{ $fee_voucher->fv_t_fee }}</td> --}}
+                                    </tr>
+                                {{-- @endif --}}
+
+                                {{-- @if ($fee_voucher->fv_p_fund > 0) --}}
+                                    <tr>
+                                        <td>Paper Fund</td>
+                                        {{-- <td>{{ $fee_voucher->fv_p_fund }}</td> --}}
+                                    </tr>
+                                {{-- @endif --}}
+                                {{-- @if ($fee_voucher->fv_a_fund > 0) --}}
+                                    <tr>
+                                        {{-- <td>Annual Fund</td> --}}
+                                        {{-- <td>{{ $fee_voucher->fv_a_fund }}</td> --}}
+                                    </tr>
+                                {{-- @endif --}}
+
+                            </tbody>
+                            <tfoot style="border-top:2px solid black; line-height:18px;">
+                                <tr>
+                                    <td><strong>Net Fee:</strong></td>
+                                    {{-- <td><strong>{{ $fee_voucher->fv_total_amount }}</strong></td> --}}
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    {{-- <p style="line-height:10px;"><strong>Rupees: </strong><strong --}}
+                            {{-- style="text-transform: uppercase;">{{ $nbrOfWrds }} Only /-</strong></p> --}}
+                    {{-- <p style="line-height:15px;"><strong>Note: After due date, late fee fine @ Rs. 20/ - Per
+                            day And duplicate voucher charges Rs 50/- Per Copy</strong></p> --}}
+                </div>
+                <div class="signature">
+                    <p>
+                        <span style="font-size: 10px">Depositor Sign:_________________</span>
+                        <span style="font-size: 10px">Authorized Sign:_________________</span>
+                    </p>
+                </div>
+            </div>
+            {{-- <div class = "vertical"></div> --}}
+        </div>
+
+    </div>
+    <!-- Home -->
+    {{-- <iframe style="display: none" id="printf" name="printf"
+        src="{{ route('month_fee_items_view_details_pdf_SH', ['id' => $class_id]) }}"
+        title="W3Schools Free Online Web Tutorials">Iframe
+    </iframe> --}}
+    <a href="#" id="printi" onclick="PrintFrame()" class="btn btn-sm btn-info v_print"
+        style="float: left;margin-top: 7px;">
+        Print
+    </a>
+</body>
+
+</html>
+<script>
+    function PrintFrame() {
+        // window.frames["printf"].focus();
+        window.frames["printf"].print();
+    }
+</script>
